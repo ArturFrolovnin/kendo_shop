@@ -9,13 +9,15 @@ import AppLayout from "/src/layout/AppLayout.vue";
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 html,
 body,
 #app,
 .app-appilication {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   width: 100%;
   height: 100%;
 }

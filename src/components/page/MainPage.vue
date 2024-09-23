@@ -1,10 +1,16 @@
 <template>
-  <div class="container-image-page"></div>
+  <div class="container-image-page">
+    <div class="heder-page">
+      <TitlePage />
+      <Navbar />
+    </div>
+  </div>
 </template>
-<script>
-export default {};
+<script setup>
+import TitlePage from "/src/components/elements/titlePage/TitlePage.vue";
+import Navbar from "/src/components/elements/navbar/NavBar.vue";
 </script>
-<style>
+<style scoped>
 .container-image-page {
   background-image: var(--background-main-page);
   width: 100%;
