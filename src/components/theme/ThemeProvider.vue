@@ -1,6 +1,5 @@
-<script>
-export default {};
-</script>
+<template></template>
+<script setup></script>
 
 <style>
 :root {

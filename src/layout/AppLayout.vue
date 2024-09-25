@@ -1,6 +1,7 @@
 <template>
   <div class="app-layout">
     <MainPage />
+    <ThemeProvider />
   </div>
 </template>
 
