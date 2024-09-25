@@ -3,12 +3,14 @@
     <div class="heder-page">
       <TitlePage />
       <Navbar />
+      <InformationBlock />
     </div>
   </div>
 </template>
 <script setup>
 import TitlePage from "/src/components/elements/titlePage/TitlePage.vue";
 import Navbar from "/src/components/elements/navbar/NavBar.vue";
+import InformationBlock from "/src/components/elements/info/InformationBlock.vue";
 </script>
 <style scoped>
 .container-image-page {

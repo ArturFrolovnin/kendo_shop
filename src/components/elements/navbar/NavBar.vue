@@ -36,6 +36,8 @@
   transition-timing-function: ease-out;
   filter: brightness(1);
   opacity: 1;
+  font-size: 18px;
+  font-weight: 400;
 }
 .conainer-buttons button:first-child {
   border-radius: 5px 0px 0px 5px;
