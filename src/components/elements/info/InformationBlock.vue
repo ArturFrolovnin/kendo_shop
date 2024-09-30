@@ -44,7 +44,6 @@
   font-size: 22px;
   font-weight: 500;
   font-family: inherit;
-  font-family: "Red Hat Display", sans-serif;
 }
 
 .info-block ul {

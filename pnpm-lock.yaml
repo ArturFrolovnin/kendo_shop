@@ -14,6 +14,9 @@ importers:
       vue:
         specifier: ^3.4.37
         version: 3.5.7
+      vue3-carousel:
+        specifier: ^0.3.4
+        version: 0.3.4(vue@3.5.7)
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.1.2
@@ -386,6 +389,11 @@ packages:
       terser:
         optional: true
 
+  vue3-carousel@0.3.4:
+    resolution: {integrity: sha512-jImUDbQa/9pELxUQdkflUPXL94V+iQZaOPUxWDBKSffCuxhYcV3sDM40pxoiYxUxXoNCDLUF4u9Ug6Xjdt4nkA==}
+    peerDependencies:
+      vue: ^3.2.0
+
   vue@3.5.7:
     resolution: {integrity: sha512-JcFm0f5j8DQO9E07pZRxqZ/ZsNopMVzHYXpKvnfqXFcA4JTi+4YcrikRn9wkzWsdj0YsLzlLIsR0zzGxA2P6Wg==}
     peerDependencies:
@@ -676,6 +684,10 @@ snapshots:
       rollup: 4.22.2
     optionalDependencies:
       fsevents: 2.3.3
+
+  vue3-carousel@0.3.4(vue@3.5.7):
+    dependencies:
+      vue: 3.5.7
 
   vue@3.5.7:
     dependencies:

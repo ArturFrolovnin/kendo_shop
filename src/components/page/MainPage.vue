@@ -4,6 +4,7 @@
       <TitlePage />
       <Navbar />
       <InformationBlock />
+      <SliderForProducts />
     </div>
   </div>
 </template>
@@ -11,12 +12,13 @@
 import TitlePage from "/src/components/elements/titlePage/TitlePage.vue";
 import Navbar from "/src/components/elements/navbar/NavBar.vue";
 import InformationBlock from "/src/components/elements/info/InformationBlock.vue";
+import SliderForProducts from "/src/components/elements/slider/SliderForProducts.vue";
 </script>
 <style scoped>
-.container-image-page {
-  background-image: var(--background-main-page);
+.container-image-page,
+.heder-page {
   width: 100%;
   height: 100%;
-  background-size: cover;
+
 }
 </style>
