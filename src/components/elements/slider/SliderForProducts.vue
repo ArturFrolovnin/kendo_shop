@@ -33,7 +33,7 @@ const settings = reactive({
   snapAlign: "center",
   wrapAround: true,
   autoplay: 4000,
-  transition: 1000,
+  transition: 900,
 });
 </script>
 

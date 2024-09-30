@@ -1,7 +1,7 @@
 {
-  "img1": "/assets/slider/img1.jpg",
-  "img2": "/assets/slider/img2.png",
-  "img3": "/assets/slider/img3.png",
-  "img4": "/assets/slider/img4.png",
-  "img5": "/assets/slider/img5.png"
+  "img1": "/slider/img1.jpg",
+  "img2": "/slider/img2.png",
+  "img3": "/slider/img3.png",
+  "img4": "/slider/img4.png",
+  "img5": "/slider/img5.png"
 }
