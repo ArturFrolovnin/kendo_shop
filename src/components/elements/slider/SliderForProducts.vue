@@ -3,12 +3,14 @@
     <div class="title-section">
       <h2>Новинки</h2>
     </div>
+    <img :src="ImgForSlider.img4" alt="" />
+
     <div class="wrapper-container-slider">
       <div class="container-slider">
         <Carousel v-bind="settings" class="carousel-slider">
-          <Slide v-for="slide in list" :key="slide">
+          <Slide v-for="slide of ImgForSlider" :key="slide">
             <div class="slide-item">
-              <img :src="slide" alt="" />
+              <img :src="slide" alt="products" />
             </div>
           </Slide>
 
@@ -23,7 +25,7 @@
 </template>
 
 <script setup>
-import list from "/src/data/slider/ImgForSlider.json";
+import ImgForSlider from "/src/data/slider/ImgForSlider.json";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import { reactive } from "vue";
