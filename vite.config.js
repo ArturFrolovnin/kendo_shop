@@ -4,10 +4,7 @@ import basicSsl from "@vitejs/plugin-basic-ssl";
 
 export default defineConfig({
   plugins: [vue(), basicSsl()],
-  build: {
-    outDir: "./docs",
-  },
-  // base: "/kendo_shop/",
+  base: "/kendo_shop/",
 });
 
 // https://vitejs.dev/config/
