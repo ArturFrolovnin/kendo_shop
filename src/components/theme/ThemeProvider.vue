@@ -1,6 +1,5 @@
 <template></template>
 <script setup></script>
-
 <style>
 * {
   font-family: "Red Hat Display", sans-serif;
@@ -14,9 +13,7 @@
     rgba(132, 147, 120, 0.72)
   );
   --dark-text-color: rgb(29, 34, 39);
- 
 }
-
 .button {
   cursor: pointer;
   user-select: none;

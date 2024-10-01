@@ -1,11 +1,9 @@
 <template>
-  <div class="container-image-page">
-    <div class="heder-page">
-      <TitlePage />
-      <Navbar />
-      <InformationBlock />
-      <SliderForProducts />
-    </div>
+  <div class="container-main-page">
+    <TitlePage />
+    <Navbar />
+    <InformationBlock />
+    <SliderForProducts />
   </div>
 </template>
 <script setup>
@@ -15,10 +13,11 @@ import InformationBlock from "/src/components/elements/info/InformationBlock.vue
 import SliderForProducts from "/src/components/elements/slider/SliderForProducts.vue";
 </script>
 <style scoped>
-.container-image-page,
-.heder-page {
+.container-main-page {
   width: 100%;
   height: 100%;
-
+  background-image: var(--background-main-page);
+  background-size: cover;
+  background-repeat: repeat-y;
 }
 </style>

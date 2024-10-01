@@ -19,11 +19,6 @@ body,
 #app,
 .app-appilication {
   width: 100%;
-  height: 100%;
-}
-body {
-  background-image: var(--background-main-page);
-  background-size: cover;
-  background-repeat: repeat-y;
+  min-height: var(--tg-viewport-stable-height);
 }
 </style>
