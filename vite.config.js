@@ -3,12 +3,11 @@ import vue from "@vitejs/plugin-vue";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 
 export default defineConfig({
-  base: "/kendo_shop/",
   plugins: [vue(), basicSsl()],
   build: {
     outDir: "./docs",
   },
-  base: "./",
+  // base: "/kendo_shop/",
 });
 
 // https://vitejs.dev/config/

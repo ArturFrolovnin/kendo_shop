@@ -35,11 +35,11 @@ const settings = reactive({
   autoplay: 4000,
   transition: 900,
 });
-ImgForSlider.img1 = new URL(`/slider/img1.jpg`, import.meta.url).href;
-ImgForSlider.img2 = new URL(`/slider/img2.png`, import.meta.url).href;
-ImgForSlider.img3 = new URL(`/slider/img3.png`, import.meta.url).href;
-ImgForSlider.img4 = new URL(`/slider/img4.png`, import.meta.url).href;
-ImgForSlider.img5 = new URL(`/slider/img5.png`, import.meta.url).href;
+// ImgForSlider.img1 = new URL(`/slider/img1.jpg`, import.meta.url).href;
+// ImgForSlider.img2 = new URL(`/slider/img2.png`, import.meta.url).href;
+// ImgForSlider.img3 = new URL(`/slider/img3.png`, import.meta.url).href;
+// ImgForSlider.img4 = new URL(`/slider/img4.png`, import.meta.url).href;
+// ImgForSlider.img5 = new URL(`/slider/img5.png`, import.meta.url).href;
 </script>
 
 <style scoped>
