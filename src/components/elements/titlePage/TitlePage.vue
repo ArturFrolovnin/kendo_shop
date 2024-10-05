@@ -2,11 +2,11 @@
   <div class="container-title-page">
     <div class="holder-title-page">
       <div class="logo-page">
-        <img src="/public/assets/image/frogTitle.png" alt="frog" />
+        <img src="/public/assets/image/frogTitle.webp" alt="frog" />
       </div>
       <div class="title-page"><h1>СИНАЙНАЯ</h1></div>
       <div class="logo-page reverse">
-        <img src="/public/assets/image/frogTitle.png" alt="frog" />
+        <img src="/public/assets/image/frogTitle.webp" alt="frog" />
       </div>
     </div>
   </div>
