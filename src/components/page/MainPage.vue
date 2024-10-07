@@ -4,6 +4,7 @@
     <Navbar />
     <InformationBlock />
     <SliderForProducts />
+    <ProductCatalog />
   </div>
 </template>
 <script setup>
@@ -11,6 +12,7 @@ import TitlePage from "/src/components/elements/titlePage/TitlePage.vue";
 import Navbar from "/src/components/elements/navbar/NavBar.vue";
 import InformationBlock from "/src/components/elements/info/InformationBlock.vue";
 import SliderForProducts from "/src/components/elements/slider/SliderForProducts.vue";
+import ProductCatalog from "/src/components/elements/catalog/ProductCatalog.vue";
 </script>
 <style scoped>
 .container-main-page {

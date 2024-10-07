@@ -1,0 +1,51 @@
+[
+  {
+    "image": "./assets/catalog/card/titanium.webp",
+    "name": "Титан",
+    "description": "Синай добари",
+    "price": "3300 ₽",
+    "type": "sinai"
+  },
+  {
+    "image": "./assets/catalog/card/samurai.webp",
+    "name": "Самурай",
+    "description": "Синай кото",
+    "price": "3500 ₽",
+    "type": "sinai"
+  },
+  {
+    "image": "./assets/catalog/card/NPC.webp",
+    "name": "NPC",
+    "description": "Синай для тренировок",
+    "price": "2000 ₽",
+    "type": "sinai"
+  },
+  {
+    "image": "./assets/catalog/card/Pixel.webp",
+    "name": "Пиксель",
+    "description": "Синай с ромбовидной рукоятью",
+    "price": "4600 ₽",
+    "type": "form"
+  },
+  {
+    "image": "./assets/catalog/card/darkSide.webp",
+    "name": "Тёмная сторона",
+    "description": "Копчёный синай",
+    "price": "2800 ₽",
+    "type": "form"
+  },
+  {
+    "image": "./assets/catalog/card/Legendary.webp",
+    "name": "Легендарный",
+    "description": "Синай с овальной рукоятью",
+    "price": "4600 ₽",
+    "type": "form"
+  },
+  {
+    "image": "./assets/catalog/card/Lightning.webp",
+    "name": "Молния",
+    "description": "Синай копчёный добари",
+    "price": "4600 ₽",
+    "type": "form"
+  }
+]

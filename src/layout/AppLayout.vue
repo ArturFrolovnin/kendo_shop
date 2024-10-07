@@ -7,7 +7,7 @@
 
 <script setup>
 import MainPage from "/src/components/page/MainPage.vue";
-import ThemeProvider from "/src/components/theme/ThemeProvider.vue";
+import ThemeProvider from "/src/theme/ThemeProvider.vue";
 </script>
 
 <style scoped>
