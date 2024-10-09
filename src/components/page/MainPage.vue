@@ -5,6 +5,7 @@
     <InformationBlock />
     <SliderForProducts />
     <ProductCatalog />
+    <DeliveryInformation />
   </div>
 </template>
 <script setup>
@@ -13,6 +14,7 @@ import Navbar from "/src/components/elements/navbar/NavBar.vue";
 import InformationBlock from "/src/components/elements/info/InformationBlock.vue";
 import SliderForProducts from "/src/components/elements/slider/SliderForProducts.vue";
 import ProductCatalog from "/src/components/elements/catalog/ProductCatalog.vue";
+import DeliveryInformation from "/src/components/elements/delivery/DeliveryInformation.vue";
 </script>
 <style scoped>
 .container-main-page {
