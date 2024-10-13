@@ -34,12 +34,15 @@
   align-items: center;
   justify-content: center;
   background: var(--background-title-section);
+}
+.title-section h2 {
   color: var(--dark-text-color);
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 34px;
 }
 
 .info-block-delivery {
-  margin: 10px 20px;
+  margin: 15px 20px 30px 20px;
   padding: 20px;
   border-radius: 20px;
   background: var(--background-title-section);

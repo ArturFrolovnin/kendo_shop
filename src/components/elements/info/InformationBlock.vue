@@ -11,7 +11,7 @@
       </ul>
 
       <div class="container-button">
-        <img src="/public/assets/image/frogForButton.webp" alt="" />
+        <img src="/public/assets/image/frogDarkGreen.webp" alt="" />
         <button class="button">подробнее</button>
       </div>
     </div>
