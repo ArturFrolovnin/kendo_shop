@@ -1,18 +1,28 @@
 <template>
   <div class="container-product-catalog">
     <div class="container-title-section">
-      <div class="selected-section-catalog" @click="openCatalogFilter()">
-        <h2>каталог</h2>
+      <div
+        class="selected-section-catalog"
+        :class="{ 'open-filter': isOpenFilter }"
+        @click="openCatalogFilter()"
+      >
+        <div class="wrapper-title">
+          <h2>каталог</h2>
 
-        <svg viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M27 14.8049L20.75 20.9024L14.5 27L2 14.8049M2 2.00015L14.5 14.1953L20.75 8.09771L27 2.00015"
-            stroke="#1D2227"
-            stroke-width="3.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg
+            viewBox="0 0 29 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M27 14.8049L20.75 20.9024L14.5 27L2 14.8049M2 2.00015L14.5 14.1953L20.75 8.09771L27 2.00015"
+              stroke="#1D2227"
+              stroke-width="3.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
       </div>
       <transition name="drop-down-list">
         <div v-if="isOpenFilter" class="container-selection-section">
@@ -68,19 +78,23 @@ function openCatalogFilter() {
 }
 .container-title-section {
   position: relative;
-  width: 100%;
   height: 80px;
-  background: var(--background-title-section);
-  color: var(--dark-text-color);
-  font-weight: 400;
+  width: 100%;
 }
 
 .selected-section-catalog {
+  position: absolute;
+  width: 100%;
+  height: 80px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 20px;
-  height: 100%;
+  background: var(--background-title-section);
+  padding-top: 10px;
+  transition: all 0.3s;
+}
+.open-filter {
+  height: 150px;
 }
 .selected-section-catalog h2 {
   font-weight: 400;
@@ -89,20 +103,22 @@ function openCatalogFilter() {
 .selected-section-catalog svg {
   width: 25px;
   height: 25px;
+  font-weight: 400;
+  color: var(--dark-text-color);
 }
-
+.wrapper-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 .container-selection-section {
   position: absolute;
+  top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  z-index: 0;
-  background: linear-gradient(
-    rgb(162, 181, 149, 0.6),
-    rgba(192, 218, 174, 0.85),
-    rgba(132, 147, 120, 1)
-  );
 }
 .wrapper-selection-section {
   width: 100%;
@@ -135,13 +151,12 @@ function openCatalogFilter() {
 }
 
 .drop-down-list-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.1s ease-out;
 }
 .drop-down-list-enter-from,
 .drop-down-list-leave-to {
-  transform: translateY(-50px);
-  scale: 0.2;
   opacity: 0;
+  scale: 0.1;
 }
 .container-catalog {
   display: grid;
@@ -167,10 +182,10 @@ function openCatalogFilter() {
   background: #1d2227;
   border-radius: 10px 10px 5px 5px;
 }
-.card-image img{
-width: 100%;
-height: 100%;
-object-fit: contain;
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .card-name,
