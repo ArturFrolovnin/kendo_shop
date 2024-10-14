@@ -145,7 +145,7 @@ function openCatalogFilter() {
 }
 .container-catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 10px;
   padding: 10px 10px;
 }
@@ -160,11 +160,17 @@ function openCatalogFilter() {
 
 .card-image {
   width: 100%;
+  height: 185px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #1d2227;
   border-radius: 10px 10px 5px 5px;
+}
+.card-image img{
+width: 100%;
+height: 100%;
+object-fit: contain;
 }
 
 .card-name,
