@@ -1,14 +1,17 @@
 [
   {
     "name": "Синаи",
-    "img": "./assets/catalog/filter/sinai.webp"
+    "img": "./assets/catalog/filter/sinai.webp",
+    "type": "sinai"
   },
   {
     "name": "Форма",
-    "img": "./assets/catalog/filter/uniform.webp"
+    "img": "./assets/catalog/filter/uniform.webp",
+    "type": "form"
   },
   {
     "name": "Аксессуары",
-    "img": "./assets/catalog/filter/accessories.webp"
+    "img": "./assets/catalog/filter/accessories.webp",
+    "type": "accessories"
   }
 ]

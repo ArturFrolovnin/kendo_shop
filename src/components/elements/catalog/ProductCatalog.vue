@@ -30,7 +30,11 @@
             v-for="section of DirectorySections"
             class="wrapper-selection-section"
           >
-            <button class="selection-section">
+            <button
+              class="selection-section button"
+              :class="{ 'active-section': currentSection === section.type }"
+              @click="selectSection(section.type)"
+            >
               <P> {{ section.name }}</P>
               <img :src="section.img" alt="img" />
             </button>
@@ -39,7 +43,7 @@
       </transition>
     </div>
     <div class="container-catalog">
-      <div v-for="card of CatalogCards" :key="card" class="conatainer-card">
+      <div v-for="card of catalog" :key="card" class="conatainer-card">
         <div class="card-image">
           <img :src="card.image" alt="" />
         </div>
@@ -58,12 +62,19 @@
 </template>
 
 <script setup>
-import { reactive, ref } from "vue";
+import { ref, computed } from "vue";
 import CatalogCards from "/src/data/cards/CatalogCards.json";
 import DirectorySections from "/src/data/cards/DirectorySections.json";
 
-const dataCards = reactive([]);
-const currentSection = reactive({});
+const currentSection = ref(null);
+function selectSection(type) {
+  currentSection.value = currentSection.value === type ? null : type;
+}
+
+const catalog = computed(() => {
+  if (!currentSection.value) return CatalogCards;
+  return CatalogCards.filter((card) => card.type === currentSection.value);
+});
 
 const isOpenFilter = ref(false);
 function openCatalogFilter() {
@@ -94,7 +105,7 @@ function openCatalogFilter() {
   transition: all 0.3s;
 }
 .open-filter {
-  height: 150px;
+  height: 160px;
 }
 .selected-section-catalog h2 {
   font-weight: 400;
@@ -114,7 +125,7 @@ function openCatalogFilter() {
 }
 .container-selection-section {
   position: absolute;
-  top: 50px;
+  top: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,6 +147,10 @@ function openCatalogFilter() {
   height: 100%;
   background: none;
   border: none;
+  opacity: 0.6;
+}
+.active-section {
+  opacity: 1;
 }
 
 .selection-section P {
