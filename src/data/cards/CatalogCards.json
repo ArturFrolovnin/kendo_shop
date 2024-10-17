@@ -1,51 +1,78 @@
 [
   {
-    "image": "./assets/catalog/card/titanium.webp",
+    "imageCard": "./assets/catalog/card/sinai/titanium/card/titanium.webp",
+    "imageModal": "./assets/catalog/card/sinai/titanium/modal/TitaniumMain.webp",
     "name": "Титан",
     "description": "Синай добари",
     "price": "3300 ₽",
-    "type": "sinai"
+    "type": "sinai",
+    "detailedDescription": "Противоположность кото - его баланс смещён к рукояти. Добари тяжёлый у основания и лёгкий у кенсена. За счёт этого кажется легче NPC. Хороший помощник для выполнения различных техник.",
+    "Production": "Производство: Китай.",
+    "sizes": "Размеры: 38, 39.",
+    "diameter": "Диаметр рукояти: 26 мм",
+    "equipment": "Цуба и цуба-доме в комплекте.",
+    "specifications_1": "+ 5 к скорости удара",
+    "specifications_2": "+ 15 к манёвренности",
+    "specifications_3": "+ 10 к ощущению лёгкости",
+    "detailedImages": [
+      {
+        "imgage": "./assets/catalog/card/sinai/titanium/modal/additionalImage1.webp"
+      },
+      {
+        "imgage": "./assets/catalog/card/sinai/titanium/modal/additionalImage2.webp"
+      },
+      {
+        "imgage": "./assets/catalog/card/sinai/titanium/modal/additionalImage3.webp"
+      }
+    ]
   },
   {
-    "image": "./assets/catalog/card/samurai.webp",
+    "imageCard": "./assets/catalog/card/sinai/samurai/card/samurai.webp",
     "name": "Самурай",
     "description": "Синай кото",
     "price": "3500 ₽",
     "type": "sinai"
   },
   {
-    "image": "./assets/catalog/card/NPC.webp",
+    "imageCard": "./assets/catalog/card/sinai/NPC/card/NPC.webp",
     "name": "NPC",
     "description": "Синай для тренировок",
     "price": "2000 ₽",
     "type": "sinai"
   },
   {
-    "image": "./assets/catalog/card/Pixel.webp",
+    "imageCard": "./assets/catalog/card/sinai/Pixel/card/Pixel.webp",
     "name": "Пиксель",
     "description": "Синай с ромбовидной рукоятью",
     "price": "4600 ₽",
-    "type": "form"
+    "type": "sinai"
   },
   {
-    "image": "./assets/catalog/card/darkSide.webp",
+    "imageCard": "./assets/catalog/card/sinai/darkSide/card/darkSide.webp",
     "name": "Тёмная сторона",
     "description": "Копчёный синай",
     "price": "2800 ₽",
-    "type": "form"
+    "type": "sinai"
   },
   {
-    "image": "./assets/catalog/card/Legendary.webp",
+    "imageCard": "./assets/catalog/card/sinai/Legendary/card/Legendary.webp",
     "name": "Легендарный",
     "description": "Синай с овальной рукоятью",
     "price": "4600 ₽",
-    "type": "form"
+    "type": "sinai"
   },
   {
-    "image": "./assets/catalog/card/Lightning.webp",
+    "imageCard": "./assets/catalog/card/sinai/Lightning/card/Lightning.webp",
     "name": "Молния",
     "description": "Синай копчёный добари",
     "price": "4600 ₽",
-    "type": "accessories"
+    "type": "sinai"
+  },
+  {
+    "imageCard": "./assets/catalog/card/uniform.webp",
+    "name": "Форма",
+    "description": "ГИ + ХАКАМА",
+    "price": "4500 ₽",
+    "type": "form"
   }
 ]

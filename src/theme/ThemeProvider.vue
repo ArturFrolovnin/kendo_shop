@@ -7,6 +7,7 @@
 :root {
   --background-main-page: url("/public/assets/background/backgroundPage.webp");
   --background-page-title: url("/public/assets/background/backgroundPageTitle.webp");
+  --background-modal-window: url("/public/assets/background/backgroundModalWindow.webp");
   --background-title-section: linear-gradient(
     rgb(162, 181, 149),
     rgba(192, 218, 174, 0.82),

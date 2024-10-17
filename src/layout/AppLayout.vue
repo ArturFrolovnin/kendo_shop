@@ -1,5 +1,5 @@
 <template>
-  <div class="app-layout">
+  <div id="appLayoutID" class="app-layout">
     <MainPage />
     <ThemeProvider />
   </div>
@@ -13,6 +13,6 @@ import ThemeProvider from "/src/theme/ThemeProvider.vue";
 <style scoped>
 .app-layout {
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 </style>

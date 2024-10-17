@@ -43,9 +43,14 @@
       </transition>
     </div>
     <div class="container-catalog">
-      <div v-for="card of catalog" :key="card" class="conatainer-card">
+      <div
+        v-for="card of catalog"
+        :key="card"
+        class="conatainer-card"
+        @click="openModalCard(card)"
+      >
         <div class="card-image">
-          <img :src="card.image" alt="" />
+          <img :src="card.imageCard" alt="" />
         </div>
         <div class="card-name">
           {{ card.name }}
@@ -58,6 +63,11 @@
         </div>
       </div>
     </div>
+    <ModalCards
+      :show-model="isOpenModalCard"
+      :dataCard="selectedCard"
+      @close="closeModal"
+    />
   </div>
 </template>
 
@@ -65,6 +75,7 @@
 import { ref, computed } from "vue";
 import CatalogCards from "/src/data/cards/CatalogCards.json";
 import DirectorySections from "/src/data/cards/DirectorySections.json";
+import ModalCards from "/src/components/elements/modal/ModalCards.vue";
 
 const currentSection = ref(null);
 function selectSection(type) {
@@ -80,9 +91,30 @@ const isOpenFilter = ref(false);
 function openCatalogFilter() {
   isOpenFilter.value = !isOpenFilter.value;
 }
+
+const isOpenModalCard = ref(false);
+const selectedCard = ref(null);
+function openModalCard(card) {
+  isOpenModalCard.value = !isOpenModalCard.value;
+  selectedCard.value = card;
+  console.log("card", selectedCard);
+}
+
+function closeModal(value) {
+  isOpenModalCard.value = value;
+}
 </script>
 
 <style scoped>
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 1s ease;
+}
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
 .container-product-catalog {
   width: 100%;
   height: 100%;
@@ -173,6 +205,7 @@ function openCatalogFilter() {
   opacity: 0;
   scale: 0.1;
 }
+
 .container-catalog {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
