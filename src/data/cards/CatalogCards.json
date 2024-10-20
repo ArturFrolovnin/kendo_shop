@@ -16,16 +16,17 @@
     "specifications_3": "+ 10 к ощущению лёгкости",
     "detailedImages": [
       {
-        "imgage": "./assets/catalog/card/sinai/titanium/modal/additionalImage1.webp"
+        "image": "./assets/catalog/card/sinai/titanium/modal/additionalImage1.webp"
       },
       {
-        "imgage": "./assets/catalog/card/sinai/titanium/modal/additionalImage2.webp"
+        "image": "./assets/catalog/card/sinai/titanium/modal/additionalImage2.webp"
       },
       {
-        "imgage": "./assets/catalog/card/sinai/titanium/modal/additionalImage3.webp"
+        "image": "./assets/catalog/card/sinai/titanium/modal/additionalImage3.webp"
       }
     ]
   },
+
   {
     "imageCard": "./assets/catalog/card/sinai/samurai/card/samurai.webp",
     "name": "Самурай",

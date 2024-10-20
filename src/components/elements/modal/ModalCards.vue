@@ -40,11 +40,31 @@
               <h2>{{ dataCard?.description }}</h2>
             </div>
           </div>
-          <div class="images-modal-card"></div>
-          <div class="price-modal-card"></div>
-          <div class="description-modal-card"></div>
 
-          <h2>заготовка под модальное окно</h2>
+          <div class="container-images-modal-card">
+            <div class="container-additional-images">
+              <div
+                v-for="img of dataCard.detailedImages"
+                :key="img"
+                class="additional-images"
+              >
+                <img :src="img.image" alt="" />
+              </div>
+            </div>
+            <div class="container-main-image">
+              <img :src="dataCard.imageModal" alt="" />
+            </div>
+          </div>
+
+          <div class="price-modal-card">
+            <div class="price-modal-card-image">
+              <img src="/public/assets/image/frogDarkGreen.webp" alt="" />
+            </div>
+            <button class="button">цена {{ dataCard.price }}</button>
+          </div>
+          <div class="description-modal-card">
+            <p>{{ dataCard.detailedDescription }}</p>
+          </div>
         </div>
       </div>
     </Transition>
@@ -60,6 +80,10 @@ const props = defineProps({
 const emit = defineEmits(["close"]);
 function closeModal() {
   emit("close"), false;
+}
+
+function testLog() {
+  console.log("dataCard", dataCard);
 }
 </script>
 
@@ -84,16 +108,19 @@ function closeModal() {
   align-items: center;
   justify-content: center;
   width: 100%;
+  border-radius: 5px;
 }
 .heder-modal-card {
   display: flex;
+  align-items: center;
   width: 100%;
-  gap: 10px;
+  gap: 15px;
   padding: 10px 10px;
 }
 .heder-modal-card button {
   background: none;
   border: none;
+  width: 50px;
 }
 .heder-modal-card button svg {
   width: 35px;
@@ -104,10 +131,82 @@ function closeModal() {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: rgba(244, 250, 243, 0.808);
 }
 .title-modal-card {
   width: 100%;
-  background: rgba(118, 133, 108, 0.85);
+  background: rgba(118, 133, 108, 0.9);
+  border-radius: 5px;
+}
+
+.container-images-modal-card {
+  display: flex;
+  padding: 0px 10px;
+  justify-content: center;
+  width: 100%;
+  gap: 7px;
+  padding-bottom: 15px;
+}
+.container-additional-images {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.additional-images {
+  width: 50px;
+  height: 50px;
+  background: rgb(29, 34, 39);
+  border-radius: 5px;
+}
+.additional-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-main-image {
+  background: rgb(29, 34, 39);
+  border-radius: 5px;
+}
+.container-main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.price-modal-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px 10px;
+}
+
+.price-modal-card-image {
+  width: 50px;
+  height: 50px;
+}
+.price-modal-card-image img {
+  transform: scale(-1, 1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.price-modal-card button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: rgb(29, 34, 39);
+  color: rgb(244, 250, 243);
+  border: solid 1px rgb(118, 133, 108);
+}
+
+.description-modal-card {
+  padding: 0px 10px 10px 10px;
+}
+.description-modal-card p {
+  background: rgb(118, 133, 108);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .modal-enter-active,
