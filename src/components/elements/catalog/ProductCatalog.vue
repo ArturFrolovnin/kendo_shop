@@ -184,6 +184,10 @@ function closeModal(value) {
 .active-section {
   opacity: 1;
 }
+.selection-section img {
+  width: 100%;
+  height: 100%;
+}
 
 .selection-section P {
   position: absolute;

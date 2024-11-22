@@ -69,7 +69,7 @@ const settings = reactive({
   background: rgb(29, 34, 39);
   border: solid 2px rgba(133, 186, 136, 0.85);
   border-radius: 15px;
-  width: 400px;
+  width: 100%;
   height: 300px;
 }
 .carousel-slider {
