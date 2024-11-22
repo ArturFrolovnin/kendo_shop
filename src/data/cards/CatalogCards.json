@@ -215,5 +215,117 @@
         "image": "./assets/catalog/card/uniform/modal/additionalImage3.webp"
       }
     ]
+  },
+  {
+    "imageCard": "./assets/catalog/card/accessories/ayameCase/card/ayameCase.webp",
+    "imageModal": "./assets/catalog/card/accessories/card/ayameCase.webp",
+    "name": "Чехол “Аямэ”",
+    "description": "Для синая и бокуто",
+    "price": "900 ₽",
+    "type": "accessories",
+    "detailedDescription": "",
+    "Production": "Производство: Китай.",
+    "sizes": "В наличии размеры на рост: 165, 170, 175.",
+    "diameter": "",
+    "equipment": "Свойства ткани ТС: ",
+    "specifications_1": "высокие гигиенические качества;",
+    "specifications_2": "хорошая износостойкость;",
+    "specifications_3": "малая сминаемость;",
+    "specifications_4": "лёгкий уход.",
+    "detailedImages": [
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage1.webp"
+      },
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage2.webp"
+      },
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage3.webp"
+      }
+    ]
+  },
+  {
+    "imageCard": "./assets/catalog/card/accessories/dragonflyCase/card/Dragonfly.webp",
+    "imageModal": "./assets/catalog/card/accessories/card/ayameCase.webp",
+    "name": "Чехол “Стрекоза”",
+    "description": "Для синая и бокуто",
+    "price": "1600 ₽",
+    "type": "accessories",
+    "detailedDescription": "",
+    "Production": "Производство: Китай.",
+    "sizes": "В наличии размеры на рост: 165, 170, 175.",
+    "diameter": "",
+    "equipment": "Свойства ткани ТС: ",
+    "specifications_1": "высокие гигиенические качества;",
+    "specifications_2": "хорошая износостойкость;",
+    "specifications_3": "малая сминаемость;",
+    "specifications_4": "лёгкий уход.",
+    "detailedImages": [
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage1.webp"
+      },
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage2.webp"
+      },
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage3.webp"
+      }
+    ]
+  },
+  {
+    "imageCard": "./assets/catalog/card/accessories/armorBag/card/armorBag.webp",
+    "imageModal": "./assets/catalog/card/accessories/card/ayameCase.webp",
+    "name": "Сумка",
+    "description": "Помещается доспех, форма и тенегуя",
+    "price": "2500 ₽",
+    "type": "accessories",
+    "detailedDescription": "",
+    "Production": "Производство: Китай.",
+    "sizes": "В наличии размеры на рост: 165, 170, 175.",
+    "diameter": "",
+    "equipment": "Свойства ткани ТС: ",
+    "specifications_1": "высокие гигиенические качества;",
+    "specifications_2": "хорошая износостойкость;",
+    "specifications_3": "малая сминаемость;",
+    "specifications_4": "лёгкий уход.",
+    "detailedImages": [
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage1.webp"
+      },
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage2.webp"
+      },
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage3.webp"
+      }
+    ]
+  },
+  {
+    "imageCard": "./assets/catalog/card/accessories/teneguya/card/teneguya.webp",
+    "imageModal": "./assets/catalog/card/accessories/card/ayameCase.webp",
+    "name": "Тенегуя",
+    "description": "Горы, 33х90, хлопок",
+    "price": "200 ₽",
+    "type": "accessories",
+    "detailedDescription": "",
+    "Production": "Производство: Китай.",
+    "sizes": "В наличии размеры на рост: 165, 170, 175.",
+    "diameter": "",
+    "equipment": "Свойства ткани ТС: ",
+    "specifications_1": "высокие гигиенические качества;",
+    "specifications_2": "хорошая износостойкость;",
+    "specifications_3": "малая сминаемость;",
+    "specifications_4": "лёгкий уход.",
+    "detailedImages": [
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage1.webp"
+      },
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage2.webp"
+      },
+      {
+        "image": "./assets/catalog/card/uniform/modal/additionalImage3.webp"
+      }
+    ]
   }
 ]
