@@ -1,3 +1,43 @@
+<script setup>
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Navigation } from "vue3-carousel";
+import { computed, ref } from "vue";
+
+const props = defineProps({
+  showModel: Boolean,
+  dataCard: Object,
+});
+
+const currentSlide = ref(0);
+
+const slideTo = (nextSlide) => (currentSlide.value = nextSlide);
+
+// const numberImages = computed(() => {
+//   return props.dataCard.detailedImages.length ?? 1;
+// });
+
+// function testLog() {
+//   console.log("numberImages", numberImages.value);
+// }
+
+const galleryConfig = {
+  itemsToShow: 1,
+  wrapAround: true,
+  mouseDrag: true,
+  touchDrag: true,
+};
+
+const thumbnailsConfig = {
+  itemsToShow: props.dataCard.detailedImages.length,
+  wrapAround: true,
+  gap: 10,
+};
+
+const emit = defineEmits(["close"]);
+function closeModal() {
+  emit("close"), false;
+}
+</script>
 <template>
   <Teleport to="body">
     <Transition name="modal">
@@ -41,7 +81,7 @@
             </div>
           </div>
 
-          <div class="container-images-modal-card" @click="testLog()">
+          <div class="container-images-modal-card">
             <Carousel
               id="gallery"
               v-bind="galleryConfig"
@@ -61,6 +101,7 @@
                 </div>
               </Slide>
             </Carousel>
+            <!-- :itemsToShow="props.dataCard.detailedImages.length" -->
 
             <Carousel
               id="thumbnails"
@@ -81,7 +122,7 @@
                 </div>
               </Slide>
 
-              <template #addons>
+              <template #addons class="navigation">
                 <Navigation />
               </template>
             </Carousel>
@@ -95,54 +136,6 @@
     </Transition>
   </Teleport>
 </template>
-
-<script setup>
-import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide, Navigation } from "vue3-carousel";
-import { computed, ref } from "vue";
-
-const props = defineProps({
-  showModel: Boolean,
-  dataCard: Object,
-});
-
-const currentSlide = ref(0);
-
-const slideTo = (nextSlide) => (currentSlide.value = nextSlide);
-
-const galleryConfig = {
-  itemsToShow: 1,
-  wrapAround: true,
-  mouseDrag: true,
-  touchDrag: true,
-};
-
-const thumbnailsConfig = {
-  itemsToShow: 6,
-  wrapAround: true,
-  gap: 10,
-};
-
-const numberImages = computed(() => {
-  return props.dataCard.detailedImages;
-});
-
-const images = Array.from({ length: numberImages }, (_, index) => ({
-  id: index + 1,
-  url: props.dataCard.detailedImages[index + 1],
-}));
-
-const emit = defineEmits(["close"]);
-function closeModal() {
-  emit("close"), false;
-}
-
-function testLog() {
-  console.log("dataCard", props.dataCard.detailedImages[0]);
-  console.log("dataCard", props.dataCard.detailedImages);
-  console.log("images", images);
-}
-</script>
 
 <style scoped>
 .container-modal-card {
@@ -276,8 +269,6 @@ function testLog() {
   object-fit: cover;
 }
 
-.description-modal-card {
-}
 .description-modal-card p {
   background: rgb(118, 133, 108);
   padding: 10px;
@@ -292,5 +283,13 @@ function testLog() {
 .modal-enter-from,
 .modal-leave-to {
   opacity: 0;
+}
+</style>
+<style>
+.carousel__prev {
+  left: -10px !important;
+}
+.carousel__next {
+  right: -10px !important;
 }
 </style>

@@ -1,3 +1,38 @@
+<script setup>
+import { ref, computed } from "vue";
+import CatalogCards from "/src/data/cards/CatalogCards.json";
+import DirectorySections from "/src/data/cards/DirectorySections.json";
+import ModalCards from "/src/components/elements/modal/ModalCards.vue";
+
+const currentSection = ref(null);
+function selectSection(type) {
+  currentSection.value = currentSection.value === type ? null : type;
+}
+
+const catalog = computed(() => {
+  if (!currentSection.value) return CatalogCards;
+  return CatalogCards.filter((card) => card.type === currentSection.value);
+});
+
+const isOpenFilter = ref(false);
+function openCatalogFilter() {
+  isOpenFilter.value = !isOpenFilter.value;
+}
+
+const isOpenModalCard = ref(false);
+const selectedCard = ref(null);
+function openModalCard(card) {
+  console.log("card", card);
+
+  selectedCard.value = card;
+  isOpenModalCard.value = !isOpenModalCard.value;
+}
+
+function closeModal(value) {
+  isOpenModalCard.value = value;
+}
+</script>
+
 <template>
   <div class="container-product-catalog">
     <div class="container-title-section">
@@ -64,46 +99,13 @@
       </div>
     </div>
     <ModalCards
+      v-if="isOpenModalCard"
       :show-model="isOpenModalCard"
       :dataCard="selectedCard"
       @close="closeModal"
     />
   </div>
 </template>
-
-<script setup>
-import { ref, computed } from "vue";
-import CatalogCards from "/src/data/cards/CatalogCards.json";
-import DirectorySections from "/src/data/cards/DirectorySections.json";
-import ModalCards from "/src/components/elements/modal/ModalCards.vue";
-
-const currentSection = ref(null);
-function selectSection(type) {
-  currentSection.value = currentSection.value === type ? null : type;
-}
-
-const catalog = computed(() => {
-  if (!currentSection.value) return CatalogCards;
-  return CatalogCards.filter((card) => card.type === currentSection.value);
-});
-
-const isOpenFilter = ref(false);
-function openCatalogFilter() {
-  isOpenFilter.value = !isOpenFilter.value;
-}
-
-const isOpenModalCard = ref(false);
-const selectedCard = ref(null);
-function openModalCard(card) {
-  isOpenModalCard.value = !isOpenModalCard.value;
-  selectedCard.value = card;
-  console.log("card", selectedCard);
-}
-
-function closeModal(value) {
-  isOpenModalCard.value = value;
-}
-</script>
 
 <style scoped>
 .modal-enter-active,
