@@ -41,27 +41,52 @@
             </div>
           </div>
 
-          <div class="container-images-modal-card">
-            <div class="container-additional-images">
-              <div
-                v-for="img of dataCard.detailedImages"
-                :key="img"
-                class="additional-images"
+          <div class="container-images-modal-card" @click="testLog()">
+            <Carousel
+              id="gallery"
+              v-bind="galleryConfig"
+              v-model="currentSlide"
+              class="carousel-displayed-image"
+            >
+              <Slide
+                v-for="image in props.dataCard.detailedImages"
+                :key="image.id"
               >
-                <img :src="img.image" alt="" />
-              </div>
-            </div>
-            <div class="container-main-image">
-              <img :src="dataCard.imageModal" alt="" />
-            </div>
+                <div class="carousel__item">
+                  <img
+                    :src="image.image"
+                    alt="Gallery Image"
+                    class="gallery-image"
+                  />
+                </div>
+              </Slide>
+            </Carousel>
+
+            <Carousel
+              id="thumbnails"
+              v-bind="thumbnailsConfig"
+              v-model="currentSlide"
+              class="group-slider-images"
+            >
+              <Slide
+                v-for="image in props.dataCard.detailedImages"
+                :key="image.id"
+              >
+                <div class="carousel__items" @click="slideTo(image.id - 1)">
+                  <img
+                    :src="image.image"
+                    alt="Thumbnail Image"
+                    class="thumbnail-image"
+                  />
+                </div>
+              </Slide>
+
+              <template #addons>
+                <Navigation />
+              </template>
+            </Carousel>
           </div>
 
-          <div class="price-modal-card">
-            <div class="price-modal-card-image">
-              <img src="/public/assets/image/frogDarkGreen.webp" alt="" />
-            </div>
-            <button class="button">цена {{ dataCard.price }}</button>
-          </div>
           <div class="description-modal-card">
             <p>{{ dataCard.detailedDescription }}</p>
           </div>
@@ -72,10 +97,40 @@
 </template>
 
 <script setup>
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Navigation } from "vue3-carousel";
+import { computed, ref } from "vue";
+
 const props = defineProps({
   showModel: Boolean,
   dataCard: Object,
 });
+
+const currentSlide = ref(0);
+
+const slideTo = (nextSlide) => (currentSlide.value = nextSlide);
+
+const galleryConfig = {
+  itemsToShow: 1,
+  wrapAround: true,
+  mouseDrag: true,
+  touchDrag: true,
+};
+
+const thumbnailsConfig = {
+  itemsToShow: 6,
+  wrapAround: true,
+  gap: 10,
+};
+
+const numberImages = computed(() => {
+  return props.dataCard.detailedImages;
+});
+
+const images = Array.from({ length: numberImages }, (_, index) => ({
+  id: index + 1,
+  url: props.dataCard.detailedImages[index + 1],
+}));
 
 const emit = defineEmits(["close"]);
 function closeModal() {
@@ -83,7 +138,9 @@ function closeModal() {
 }
 
 function testLog() {
-  console.log("dataCard", dataCard);
+  console.log("dataCard", props.dataCard.detailedImages[0]);
+  console.log("dataCard", props.dataCard.detailedImages);
+  console.log("images", images);
 }
 </script>
 
@@ -109,13 +166,18 @@ function testLog() {
   justify-content: center;
   width: 100%;
   border-radius: 5px;
+  padding: 10px;
+  gap: 10px;
 }
 .heder-modal-card {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   gap: 15px;
-  padding: 10px 10px;
+  background: rgba(118, 133, 108, 0.9);
+  border-radius: 5px;
+  padding-left: 10px;
 }
 .heder-modal-card button {
   background: none;
@@ -135,17 +197,58 @@ function testLog() {
 }
 .title-modal-card {
   width: 100%;
-  background: rgba(118, 133, 108, 0.9);
-  border-radius: 5px;
 }
 
 .container-images-modal-card {
   display: flex;
+  flex-direction: column;
   padding: 0px 10px;
   justify-content: center;
   width: 100%;
   gap: 7px;
   padding-bottom: 15px;
+  background: rgb(118, 133, 108);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-displayed-image {
+  background: rgb(29, 34, 39);
+  border-radius: 5px;
+}
+
+.carousel-displayed-image .carousel__item {
+  background: rgb(29, 34, 39);
+  width: 100%;
+}
+.carousel__item {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.carousel-displayed-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 5px;
+}
+
+.group-slider-images {
+  width: 100%;
+}
+
+.carousel__items {
+  background: rgb(29, 34, 39);
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.carousel__items img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .container-additional-images {
   display: flex;
@@ -173,35 +276,7 @@ function testLog() {
   object-fit: cover;
 }
 
-.price-modal-card {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0px 10px;
-}
-
-.price-modal-card-image {
-  width: 50px;
-  height: 50px;
-}
-.price-modal-card-image img {
-  transform: scale(-1, 1);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.price-modal-card button {
-  padding: 5px 10px;
-  border-radius: 5px;
-  background: rgb(29, 34, 39);
-  color: rgb(244, 250, 243);
-  border: solid 1px rgb(118, 133, 108);
-}
-
 .description-modal-card {
-  padding: 0px 10px 10px 10px;
 }
 .description-modal-card p {
   background: rgb(118, 133, 108);
