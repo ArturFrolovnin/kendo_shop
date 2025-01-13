@@ -99,7 +99,6 @@ function closeModal(value) {
       </div>
     </div>
     <ModalCards
-      v-if="isOpenModalCard"
       :show-model="isOpenModalCard"
       :dataCard="selectedCard"
       @close="closeModal"
