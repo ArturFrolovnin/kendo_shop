@@ -2,25 +2,11 @@
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Navigation } from "vue3-carousel";
 import { computed, ref } from "vue";
-
 const MINIMUM_NUMBER_IMAGES = 3;
 
 const props = defineProps({
   showModel: Boolean,
   dataCard: Object,
-});
-
-const currentSlide = ref(0);
-
-const slideTo = (nextSlide) => (currentSlide.value = nextSlide);
-
-const numberImages = computed(() => {
-  if (!props.dataCard?.detailedImages?.length) {
-    return MINIMUM_NUMBER_IMAGES;
-  }
-  if (props.dataCard?.detailedImages?.length < MINIMUM_NUMBER_IMAGES)
-    return MINIMUM_NUMBER_IMAGES;
-  return props.dataCard.detailedImages.length;
 });
 
 const galleryConfig = {
@@ -29,6 +15,19 @@ const galleryConfig = {
   mouseDrag: true,
   touchDrag: true,
 };
+
+const currentSlide = ref(0);
+const slideTo = (nextSlide) => (currentSlide.value = nextSlide);
+
+const numberImages = computed(() => {
+  if (
+    props.dataCard?.detailedImages?.length &&
+    props.dataCard?.detailedImages?.length >= MINIMUM_NUMBER_IMAGES
+  ) {
+    return props.dataCard.detailedImages.length;
+  }
+  return MINIMUM_NUMBER_IMAGES;
+});
 
 const thumbnailsConfig = {
   itemsToShow: numberImages.value,
@@ -39,6 +38,11 @@ const thumbnailsConfig = {
 const emit = defineEmits(["close"]);
 function closeModal() {
   emit("close"), false;
+}
+
+const isOpenDetailedDescription = ref(false);
+function openDetailedDescription() {
+  isOpenDetailedDescription.value = !isOpenDetailedDescription.value;
 }
 </script>
 <template>
@@ -112,7 +116,7 @@ function closeModal() {
             </button>
             <div class="title-modal-card">
               <h1>{{ dataCard?.name }}</h1>
-              <h2>{{ dataCard?.description }}</h2>
+              <p>{{ dataCard?.typeSinai }}</p>
             </div>
           </div>
 
@@ -136,7 +140,6 @@ function closeModal() {
                 </div>
               </Slide>
             </Carousel>
-            <!-- :itemsToShow="props.dataCard.detailedImages.length" -->
 
             <Carousel
               id="thumbnails"
@@ -164,9 +167,22 @@ function closeModal() {
           </div>
 
           <div class="description-modal-card">
-            <p class="short-description">{{ dataCard.detailedDescription }}</p>
+            <p class="short-description">{{ dataCard.description }}</p>
             <div class="expand-detailed-description">
-              <button class="button">
+              <Transition name="slide-down">
+                <di v-if="isOpenDetailedDescription">
+                  <div
+                    class="container-detailed-description"
+                    v-for="description of dataCard.detailedDescription"
+                    :key="index"
+                  >
+                    <p class="product-features">
+                      {{ description.specifications }}
+                    </p>
+                  </div>
+                </di>
+              </Transition>
+              <button class="button" @click.stop="openDetailedDescription()">
                 <p>Подробнее</p>
                 <svg
                   width="11"
@@ -263,7 +279,25 @@ function closeModal() {
   align-items: center;
   justify-content: center;
   color: rgba(244, 250, 243, 0.808);
+  padding-right: 50px;
 }
+.title-modal-card h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(244, 250, 243, 0.808);
+}
+.title-modal-card p {
+  text-align: center;
+  font-size: 18px;
+}
+@media (max-width: 450px) {
+  .title-modal-card p {
+    font-size: 4vw;
+  }
+}
+
 .title-modal-card {
   width: 100%;
 }
@@ -374,6 +408,18 @@ function closeModal() {
   height: 15px;
 }
 
+.product-features {
+  color: #f4faf3;
+  font-weight: 100;
+  padding-bottom: 10px;
+}
+.container-detailed-description:first-child {
+  padding-top: 10px;
+}
+.container-detailed-description:last-child {
+  padding-bottom: 10px;
+}
+
 .modal-enter-active,
 .modal-leave-active {
   transition: opacity 0.5s ease;
@@ -386,10 +432,10 @@ function closeModal() {
 </style>
 <style>
 .carousel__prev {
-  left: -25px !important;
+  left: -20px !important;
 }
 .carousel__next {
-  right: -25px !important;
+  right: -20px !important;
 }
 .carousel__prev .carousel__icon,
 .carousel__next .carousel__icon {

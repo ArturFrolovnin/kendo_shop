@@ -1,19 +1,35 @@
 [
   {
     "imageCard": "./assets/catalog/card/sinai/titanium/card/titanium.webp",
-    "imageModal": "./assets/catalog/card/sinai/titanium/modal/TitaniumMain.webp",
+
     "name": "Титан",
-    "description": "Синай добари",
+    "typeSinai": "Синай добари",
     "price": "3300 ₽",
     "type": "sinai",
-    "detailedDescription": "Противоположность кото - его баланс смещён к рукояти. Добари тяжёлый у основания и лёгкий у кенсена. За счёт этого кажется легче NPC. Хороший помощник для выполнения различных техник.",
-    "Production": "Производство: Китай.",
-    "sizes": "Размеры: 38, 39.",
-    "diameter": "Диаметр рукояти: 26 мм",
-    "equipment": "Цуба и цуба-доме в комплекте.",
-    "specifications_1": "+ 5 к скорости удара",
-    "specifications_2": "+ 15 к манёвренности",
-    "specifications_3": "+ 10 к ощущению лёгкости",
+    "description": "Противоположность кото - его баланс смещён к рукояти. Добари тяжёлый у основания и лёгкий у кенсена. За счёт этого кажется легче NPC. Хороший помощник для выполнения различных техник.",
+    "detailedDescription": [
+      {
+        "specifications": "Производство: Китай."
+      },
+      {
+        "specifications": "Размеры: 38, 39."
+      },
+      {
+        "specifications": "Диаметр рукояти: 26 мм."
+      },
+      {
+        "specifications": "Цуба и цуба-доме в комплекте."
+      },
+      {
+        "specifications": "+ 5 к скорости удара"
+      },
+      {
+        "specifications": "+ 15 к манёвренности"
+      },
+      {
+        "specifications": "+ 10 к ощущению лёгкости"
+      }
+    ],
     "detailedImages": [
       {
         "image": "./assets/catalog/card/sinai/titanium/modal/additionalImage1.webp"
@@ -23,25 +39,42 @@
       },
       {
         "image": "./assets/catalog/card/sinai/titanium/modal/additionalImage3.webp"
+      },
+      {
+        "image": "./assets/catalog/card/sinai/titanium/modal/TitaniumMain.webp"
       }
     ]
   },
-
   {
     "imageCard": "./assets/catalog/card/sinai/samurai/card/samurai.webp",
-    "imageModal": "./assets/catalog/card/sinai/samurai/modal/samuraiMain.webp",
     "name": "Самурай",
-    "description": "Синай кото",
+    "typeSinai": "Синай кото",
     "price": "3500 ₽",
     "type": "sinai",
-    "detailedDescription": "Koto (古刀) – с яп. значит «старый меч», катана. Баланс синая кото максимально приближен к балансу настоящей катаны. Центр тяжести смещён ближе к кенсену, поэтому удары стремятся точно к цели и ощущаются мощнее.",
-    "Production": "Производство: Китай.",
-    "sizes": "Размеры: 38, 39.",
-    "diameter": "Диаметр рукояти: 26 мм",
-    "equipment": "Цуба и цуба-доме в комплекте.",
-    "specifications_1": "+ 10 к скорости удара",
-    "specifications_2": "+ 15 к точности удара хвата меча",
-    "specifications_3": "+ 30 к ощущению «настоящий самурай",
+    "description": "Koto (古刀) – с яп. значит «старый меч», катана. Баланс синая кото максимально приближен к балансу настоящей катаны. Центр тяжести смещён ближе к кенсену, поэтому удары стремятся точно к цели и ощущаются мощнее.",
+    "detailedDescription": [
+      {
+        "specifications": "Производство: Китай."
+      },
+      {
+        "specifications": "Размеры: 38, 39."
+      },
+      {
+        "specifications": "Диаметр рукояти: 26 мм."
+      },
+      {
+        "specifications": "Цуба и цуба-доме в комплекте."
+      },
+      {
+        "specifications": "+ 10 к скорости удара"
+      },
+      {
+        "specifications": "+ 15 к точности удара хвата меча"
+      },
+      {
+        "specifications": "+ 30 к ощущению «настоящий самурай"
+      }
+    ],
     "detailedImages": [
       {
         "image": "./assets/catalog/card/sinai/samurai/modal/additionalImage1.webp"
@@ -51,6 +84,9 @@
       },
       {
         "image": "./assets/catalog/card/sinai/samurai/modal/additionalImage3.webp"
+      },
+      {
+        "image": "./assets/catalog/card/sinai/samurai/modal/samuraiMain.webp"
       }
     ]
   },
@@ -59,18 +95,36 @@
     "imageCard": "./assets/catalog/card/sinai/NPC/card/NPC.webp",
     "imageModal": "./assets/catalog/card/sinai/NPC/modal/mainImage.webp",
     "name": "NPC",
-    "description": "Синай для тренировок",
+    "typeSinai": "Синай для тренировок",
     "price": "2000 ₽",
     "type": "sinai",
-    "detailedDescription": "Стартовое оружие: доступное и прочное. Поможет вывезти много начальных квестов. Идеален для начинающих:  недорого и практично.",
-    "Production": "Производство: Китай.",
-    "sizes": "Размеры: 38, 39.",
-    "diameter": "Диаметр рукояти: 26 мм",
-    "equipment": "Цуба и цуба-доме в комплекте.",
-    "specifications_1": "+ 50 к универсальности",
-    "specifications_2": "+ 20 к экономии",
-    "specifications_3": "",
+    "description": "Стартовое оружие: доступное и прочное. Поможет вывезти много начальных квестов. Идеален для начинающих:  недорого и практично.",
+
+    "detailedDescription": [
+      {
+        "specifications": "Производство: Китай."
+      },
+      {
+        "specifications": "Размеры: 38, 39."
+      },
+      {
+        "specifications": "Диаметр рукояти: 26 мм."
+      },
+      {
+        "specifications": "Цуба и цуба-доме в комплекте."
+      },
+      {
+        "specifications": "+ 50 к универсальности"
+      },
+      {
+        "specifications": "+ 20 к экономии"
+      }
+    ],
+
     "detailedImages": [
+      {
+        "image": "./assets/catalog/card/sinai/NPC/card/NPC.webp"
+      },
       {
         "image": "./assets/catalog/card/sinai/NPC/modal/additionalImage1.webp"
       },
@@ -82,15 +136,16 @@
       }
     ]
   },
+
   {
     "imageCard": "./assets/catalog/card/sinai/Pixel/card/Pixel.webp",
     "imageModal": "./assets/catalog/card/sinai/Pixel/modal/mainImage.webp",
     "name": "Пиксель",
-    "description": "Синай с ромбовидной рукоятью",
+    "typeSinai": "Синай с ромбовидной рукоятью",
     "price": "4600 ₽",
     "type": "sinai",
 
-    "detailedDescription": "Стартовое оружие: доступное и прочное. Поможет вывезти много начальных квестов. Идеален для начинающих:  недорого и практично.",
+    "description": "Стартовое оружие: доступное и прочное. Поможет вывезти много начальных квестов. Идеален для начинающих:  недорого и практично.",
     "Production": "Производство: Китай.",
     "sizes": "Размеры: 38, 39.",
     "diameter": "Диаметр рукояти: 26 мм",
@@ -114,10 +169,10 @@
     "imageCard": "./assets/catalog/card/sinai/darkSide/card/darkSide.webp",
     "imageModal": "./assets/catalog/card/sinai/darkSide/modal/mainImage.webp",
     "name": "Тёмная сторона",
-    "description": "Копчёный синай",
+    "typeSinai": "Копчёный синай",
     "price": "2800 ₽",
     "type": "sinai",
-    "detailedDescription": "Старый добрый NPC-стандарт, прошедший огонь, воду и медные трубы, чтобы закалиться для новых тренировок. Огневая обжарка и копчение сделали бамбук крепче и темнее. ",
+    "description": "Старый добрый NPC-стандарт, прошедший огонь, воду и медные трубы, чтобы закалиться для новых тренировок. Огневая обжарка и копчение сделали бамбук крепче и темнее. ",
     "Production": "Производство: Китай.",
     "sizes": "Размеры: 38, 39.",
     "diameter": "Диаметр рукояти: 26 мм",
@@ -138,10 +193,10 @@
     "imageCard": "./assets/catalog/card/sinai/Legendary/card/Legendary.webp",
     "imageModal": "./assets/catalog/card/sinai/Legendary/modal/mainImage.webp",
     "name": "Легендарный",
-    "description": "Синай с овальной рукоятью",
+    "typeSinai": "Синай с овальной рукоятью",
     "price": "4600 ₽",
     "type": "sinai",
-    "detailedDescription": "Овальная форма имитирует рукоять настоящей катаны, не позволяя прокрутить синай цурой в сторону. Сохраняет манёвренность и помогает быстро перестраиваться в поединке.",
+    "description": "Овальная форма имитирует рукоять настоящей катаны, не позволяя прокрутить синай цурой в сторону. Сохраняет манёвренность и помогает быстро перестраиваться в поединке.",
     "Production": "Производство: Китай.",
     "sizes": "Размеры: 38, 39.",
     "diameter": "Диаметр рукояти: 26 мм",
@@ -163,10 +218,10 @@
     "imageCard": "./assets/catalog/card/sinai/Lightning/card/Lightning.webp",
     "imageModal": "./assets/catalog/card/sinai/Lightning/modal/mainImage.webp",
     "name": "Молния",
-    "description": "Синай копчёный добари",
+    "typeSinai": "Синай копчёный добари",
     "price": "4600 ₽",
     "type": "sinai",
-    "detailedDescription": "Сочетание скорости и прочности. Закалён специальной био обработкой: огневая обжарка и копчение сделали синай крепким. Смещённый к основанию баланс даёт ощущение лёгкости.",
+    "description": "Сочетание скорости и прочности. Закалён специальной био обработкой: огневая обжарка и копчение сделали синай крепким. Смещённый к основанию баланс даёт ощущение лёгкости.",
     "Production": "Производство: Китай.",
     "sizes": "Размеры: 38, 39.",
     "diameter": "Диаметр рукояти: 26 мм",
@@ -192,10 +247,10 @@
     "imageCard": "./assets/catalog/card/uniform/card/uniform.webp",
     "imageModal": "./assets/catalog/card/uniform/modal/mainImage.webp",
     "name": "Форма",
-    "description": "ГИ + ХАКАМА",
+    "typeSinai": "ГИ + ХАКАМА",
     "price": "4500 ₽",
     "type": "form",
-    "detailedDescription": "Ги из хлопка - натурального материала, комфортного для тела. Хакама изготовлена из ТС (ТиСи) — в состав входит два компонента: искусственный полиэстер (65%) и натуральный хлопок (35%).",
+    "description": "Ги из хлопка - натурального материала, комфортного для тела. Хакама изготовлена из ТС (ТиСи) — в состав входит два компонента: искусственный полиэстер (65%) и натуральный хлопок (35%).",
     "Production": "Производство: Китай.",
     "sizes": "В наличии размеры на рост: 165, 170, 175.",
     "diameter": "",
@@ -220,10 +275,10 @@
     "imageCard": "./assets/catalog/card/accessories/ayameCase/card/ayameCase.webp",
     "imageModal": "./assets/catalog/card/accessories/card/ayameCase.webp",
     "name": "Чехол “Аямэ”",
-    "description": "Для синая и бокуто",
+    "typeSinai": "Для синая и бокуто",
     "price": "900 ₽",
     "type": "accessories",
-    "detailedDescription": "",
+    "description": "",
     "Production": "Производство: Китай.",
     "sizes": "В наличии размеры на рост: 165, 170, 175.",
     "diameter": "",
@@ -248,10 +303,10 @@
     "imageCard": "./assets/catalog/card/accessories/dragonflyCase/card/Dragonfly.webp",
     "imageModal": "./assets/catalog/card/accessories/card/ayameCase.webp",
     "name": "Чехол “Стрекоза”",
-    "description": "Для синая и бокуто",
+    "typeSinai": "Для синая и бокуто",
     "price": "1600 ₽",
     "type": "accessories",
-    "detailedDescription": "",
+    "description": "",
     "Production": "Производство: Китай.",
     "sizes": "В наличии размеры на рост: 165, 170, 175.",
     "diameter": "",
@@ -276,10 +331,10 @@
     "imageCard": "./assets/catalog/card/accessories/armorBag/card/armorBag.webp",
     "imageModal": "./assets/catalog/card/accessories/card/ayameCase.webp",
     "name": "Сумка",
-    "description": "Помещается доспех, форма и тенегуя",
+    "typeSinai": "Помещается доспех, форма и тенегуя",
     "price": "2500 ₽",
     "type": "accessories",
-    "detailedDescription": "",
+    "description": "",
     "Production": "Производство: Китай.",
     "sizes": "В наличии размеры на рост: 165, 170, 175.",
     "diameter": "",
@@ -304,10 +359,10 @@
     "imageCard": "./assets/catalog/card/accessories/teneguya/card/teneguya.webp",
     "imageModal": "./assets/catalog/card/accessories/card/ayameCase.webp",
     "name": "Тенегуя",
-    "description": "Горы, 33х90, хлопок",
+    "typeSinai": "Горы, 33х90, хлопок",
     "price": "200 ₽",
     "type": "accessories",
-    "detailedDescription": "",
+    "description": "",
     "Production": "Производство: Китай.",
     "sizes": "В наличии размеры на рост: 165, 170, 175.",
     "diameter": "",

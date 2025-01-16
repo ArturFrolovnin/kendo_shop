@@ -21,9 +21,8 @@ function openCatalogFilter() {
 
 const isOpenModalCard = ref(false);
 const selectedCard = ref(null);
-function openModalCard(card) {
-  console.log("card", card);
 
+function openModalCard(card) {
   selectedCard.value = card;
   isOpenModalCard.value = !isOpenModalCard.value;
 }
@@ -91,7 +90,7 @@ function closeModal(value) {
           {{ card.name }}
         </div>
         <div class="card-description">
-          {{ card.description }}
+          {{ card.typeSinai }}
         </div>
         <div class="card-price">
           {{ card.price }}
@@ -99,6 +98,7 @@ function closeModal(value) {
       </div>
     </div>
     <ModalCards
+      v-if="isOpenModalCard"
       :show-model="isOpenModalCard"
       :dataCard="selectedCard"
       @close="closeModal"
