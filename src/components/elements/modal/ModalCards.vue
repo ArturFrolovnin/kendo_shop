@@ -235,6 +235,7 @@ function openDetailedDescription() {
   justify-content: center;
   backdrop-filter: blur(2px);
   padding: 7px;
+  overflow-y: auto;
 }
 .wrapper-modal-card {
   background: var(--background-modal-window);
